@@ -35,12 +35,13 @@ export default function App() {
     return Math.round(good * 100 / countTotalFeedback())
   };
 
-  
+  const options = Object.keys({ good, neutral, bad });
+
   return (
     <div>
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={Object.keys({ good, neutral, bad })}
+          options={options}
           onLeaveFeedback={handleButton}
         />
       </Section>
